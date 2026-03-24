@@ -118,7 +118,7 @@ public:
     // Throw std::runtime_error if insufficient funds
     void withdraw(double amount) {
         // TODO: Implement
-        if(amount <= 0|| amount > balance_){
+        if(amount <= 0 || amount > balance_){
             throw std::invalid_argument("Withdraw amount cannot be equal or lower than 0");
     }
     balance_ -= amount;
@@ -129,7 +129,7 @@ public:
     // Throw std::runtime_error if insufficient funds
     void transfer(BankAccount& other, double amount) {
         // TODO: Implement using withdraw() and deposit()
-        if(amount <= 0 || balance_ < amount){
+        if(amount <= 0 ){
             throw std::invalid_argument("Transfer is invalide");
         }
         withdraw(amount);
