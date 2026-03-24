@@ -83,7 +83,7 @@ public:
     // Throw std::invalid_argument if owner is empty or balance < 0
     BankAccount(const string& owner, double initialBalance) {
         // TODO: Validate and set members
-        if(owner.empty() || initialBalance < 0){
+        if(owner.empty()){
             throw std::invalid_argument("Name cannat be empty ");
         }
         if(initialBalance < 0){
